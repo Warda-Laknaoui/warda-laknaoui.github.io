@@ -5,12 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warda Laknaoui - Senior Business Intelligence Developer</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            transition: background 0.5s ease;
+        }
+        header, section, footer {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        header:hover, section:hover, footer:hover {
+            transform: translateY(-5px);
+        }
         .profile-picture {
             max-width: 200px;
             max-height: 200px;
             width: auto;
             height: auto;
             object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .profile-picture:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        li:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .contact-links a:hover {
+            color: #e74c3c;
+        }
+        @keyframes colorChange {
+            0% { color: #3498db; }
+            50% { color: #e74c3c; }
+            100% { color: #3498db; }
+        }
+        h1 {
+            animation: colorChange 5s infinite;
         }
     </style>
 </head>
@@ -36,7 +99,6 @@
                 <p>Jul 2023 - Present · 1 yr 8 mos</p>
                 <p>Mesa, Arizona, United States</p>
             </li>
-            <!-- Add more experience items here -->
         </ul>
     </section>
 
@@ -49,7 +111,6 @@
                 <p>2019 - 2020</p>
                 <p>Grade: Overall GPA : 4.0/4.0</p>
             </li>
-            <!-- Add more education items here -->
         </ul>
     </section>
 
@@ -58,7 +119,6 @@
         <ul>
             <li>Business Intelligence (BI)</li>
             <li>SQL</li>
-            <!-- Add more skills here -->
         </ul>
     </section>
 
@@ -69,5 +129,13 @@
             <a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank">Tableau Public</a>
         </div>
     </footer>
+
+    <script>
+        document.body.addEventListener('click', () => {
+            document.body.style.background = `linear-gradient(135deg, 
+                hsl(${Math.random() * 360}, 50%, 80%) 0%, 
+                hsl(${Math.random() * 360}, 50%, 80%) 100%)`;
+        });
+    </script>
 </body>
 </html>
