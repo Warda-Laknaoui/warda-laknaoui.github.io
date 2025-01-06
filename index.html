@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warda Laknaoui - Senior Business Intelligence Developer</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,7 +16,9 @@
             padding: 10px;
             transition: background 0.5s ease;
         }
-        header, section, footer {
+        header {
+            display: flex;
+            align-items: center;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
@@ -22,11 +26,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-        header {
-            display: flex;
-            align-items: center;
-        }
-        header:hover, section:hover, footer:hover {
+        header:hover {
             transform: translateY(-5px);
         }
         .profile-picture {
@@ -53,57 +53,16 @@
             margin: 0 0 10px 0;
             animation: colorChange 5s infinite;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        .contact-links {
+            margin-top: 10px;
         }
-        li {
-            margin-bottom: 10px;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        li:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-    #skills 
-        ul {
-        list-style-type: disc; /* Default bullet points */
-        padding-left: 20px; /* Indentation for bullets */
-        margin: 0; /* Reset margin */
-        columns: 3; /* Create three columns */
-        column-gap: 20px; /* Space between columns */
-        }
-
-        li {
-            background: none; /* Remove background */
-        border-radius: 0; /* Remove rounded corners */
-        margin: 0; /* Reset margin */
-        }
-
-        li:hover {
-        background: rgba(255, 255, 255, 0.8);
-        }
-        
         .contact-links a {
             display: inline-block;
             margin-right: 15px;
             color: #3498db;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 24px; /* Adjust icon size */
             transition: color 0.3s ease;
-        }
-        .contact-links a:hover {
-        color: #e74c3c;
-        }
-    
-        .contact-links a:hover {
-        
-        .contact-links {
-        position: fixed;
-        top: 10px;
-        right: 10px;
         }
         .contact-links a:hover {
             color: #e74c3c;
@@ -120,36 +79,20 @@
         <img src="images/Me.jpg" alt="Warda Laknaoui" class="profile-picture">
         <div class="profile-info">
             <h1>Warda Laknaoui</h1>
-            <p>Senior Business Intelligence Developer @ JLL    ||  Mesa, Arizona, United States </p>
+            <p>Senior Business Intelligence Developer @ JLL || Mesa, Arizona, United States </p>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/warda-laknaoui/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank"><i class="fas fa-chart-bar"></i></a>
                 <a href="https://medium.com/@wardalaknaoui" target="_blank"><i class="fab fa-medium"></i></a>
-        </div>
+            </div>
         </div>
     </header>
 
     <section id="about">
         <h2>About</h2>
-        <p> I am deeply passionate about data and artificial intelligence. I believe in their transformative power to unlock valuable insights, driving businesses to make informed, strategic decisions. Through leveraging data and AI, I aim to help organizations uncover hidden opportunities and achieve their objectives with precision and clarity. Outside of my professional life, I am passionate about fitness, particularly bodybuilding, which I find incredibly fascinating and enjoyable. This journey not only challenges me physically but also cultivates discipline and perseverance, qualities I bring to my professional work.
-
-            I also enjoy hiking and exploring new trails, which rejuvenates my creativity and enhances my problem-solving skills. Additionally, I am actively involved in local tech meetups, where I mentor aspiring data professionals and developers, helping them to navigate the complexities of their careers.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Critical Thinking</li>
-            <li>Problem Solving</li>
-            <li>Analytical Skills</li>
-            <li>SQL</li>
-            <li>AI</li>
-            <li>Business Analysis</li>
-            <li>Tableau</li>
-            <li>Excel</li>
-            <li>Python</li>
-            <li>Communication Skills</li>
-        </ul>
+        <p>With over three years of dedicated experience in business intelligence, I am passionate about data and artificial intelligence. I believe in their transformative power to uncover valuable business insights, driving strategic decision-making.</p>
+        <p>Outside of my professional life, I am deeply passionate about fitness, particularly bodybuilding, which I find incredibly fascinating and enjoyable. This journey not only challenges me physically but also cultivates discipline and perseverance, qualities I bring to my professional work.</p>
+        <p>I also enjoy hiking and exploring new trails, which rejuvenates my creativity and enhances my problem-solving skills. Additionally, I am actively involved in local tech meetups, where I mentor aspiring data professionals and developers, helping them to navigate the complexities of their careers.</p>
     </section>
 
     <section id="experience">
@@ -164,7 +107,17 @@
         </ul>
     </section>
 
-
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Business Intelligence (BI)</li>
+            <li>SQL</li>
+            <li>AI</li>
+            <li>Business Analysis</li>
+            <li>Tableau</li>
+            <li>Excel</li>
+        </ul>
+    </section>
 
     <section id="education">
         <h2>Education</h2>
@@ -177,7 +130,6 @@
             </li>
         </ul>
     </section>
-
 
     <script>
         document.body.addEventListener('click', () => {
