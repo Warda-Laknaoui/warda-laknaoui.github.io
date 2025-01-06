@@ -74,22 +74,17 @@
         }
     #skills 
         ul {
-        list-style-type: none; /* Removes bullet points */
-        padding: 0; /* Removes default padding */
-        margin: 0; /* Removes default margin */
-        display: flex; /* Enable Flexbox */
-        flex-wrap: wrap; /* Allow wrapping of flex items to new lines */
-        gap: 10px; /* Space between the items */
+        list-style-type: disc; /* Default bullet points */
+        padding-left: 20px; /* Indentation for bullets */
+        margin: 0; /* Reset margin */
+        columns: 3; /* Create three columns */
+        column-gap: 20px; /* Space between columns */
         }
 
         li {
-        flex: 1 1 calc(33.333% - 10px); /* Each item takes up approximately one-third of the row with gap consideration */
-        box-sizing: border-box; /* Ensure padding and border are included in the item width */
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 5px;
-        transition: background 0.3s ease;
-        text-align: center; /* Center-align the text inside each item */
+            background: none; /* Remove background */
+        border-radius: 0; /* Remove rounded corners */
+        margin: 0; /* Reset margin */
         }
 
         li:hover {
