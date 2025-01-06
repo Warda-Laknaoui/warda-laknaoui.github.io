@@ -77,14 +77,19 @@
         list-style-type: none; /* Removes bullet points */
         padding: 0; /* Removes default padding */
         margin: 0; /* Removes default margin */
+        display: flex; /* Enable Flexbox */
+        flex-wrap: wrap; /* Allow wrapping of flex items to new lines */
+        gap: 10px; /* Space between the items */
         }
 
         li {
-        margin-bottom: 5px; /* Decreases space between list items */
-        padding: 5px 10px; /* Reduces padding for each item */
+        flex: 1 1 calc(33.333% - 10px); /* Each item takes up approximately one-third of the row with gap consideration */
+        box-sizing: border-box; /* Ensure padding and border are included in the item width */
+        padding: 10px;
         background: rgba(255, 255, 255, 0.5);
         border-radius: 5px;
         transition: background 0.3s ease;
+        text-align: center; /* Center-align the text inside each item */
         }
 
         li:hover {
