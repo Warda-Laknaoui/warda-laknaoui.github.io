@@ -5,37 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warda Laknaoui - Senior Business Intelligence Developer</title>
     <style>
-        /* ... (previous styles remain unchanged) ... */
-
-        .skills-container {
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 20px;
+            transition: background 0.5s ease;
+        }
+        header, section, footer {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        header {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            align-items: center;
         }
-        .skill-badge {
-            padding: 5px 10px;
+        header:hover, section:hover, footer:hover {
+            transform: translateY(-5px);
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            margin-right: 20px;
+        }
+        .profile-picture:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .profile-info {
+            flex-grow: 1;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-style: italic;
+            margin: 0 0 10px 0;
+            animation: colorChange 5s infinite;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.9em;
+            transition: background 0.3s ease;
         }
-        .power-bi { background-color: #F2C811; color: black; }
-        .postgresql { background-color: #336791; }
-        .mysql { background-color: #00758F; }
-        .sqlite { background-color: #003B57; }
-        .tableau { background-color: #E97627; }
-        .canva { background-color: #00C4CC; }
-        .powerpoint { background-color: #B7472A; }
-        .office { background-color: #D83B01; }
-        .excel { background-color: #217346; }
-        .sheets { background-color: #0F9D58; }
-        .vscode { background-color: #007ACC; }
-        .figma { background-color: #F24E1E; }
-        .prezi { background-color: #3181FF; }
-        .sql-server { background-color: #CC2927; }
-        .github-actions { background-color: #2088FF; }
-        .windows-terminal { background-color: #4D4D4D; }
+        li:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .contact-links a:hover {
+            color: #e74c3c;
+        }
+        @keyframes colorChange {
+            0% { color: #3498db; }
+            50% { color: #e74c3c; }
+            100% { color: #3498db; }
+        }
     </style>
 </head>
 <body>
@@ -52,29 +99,41 @@
         <p>With over three years of dedicated experience in business intelligence, my journey from Business Operations Analyst to my current role as Business Intelligence Developer at JLL has been driven by a passion for data and its power to transform businesses.</p>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <span class="skill-badge power-bi">POWER BI</span>
-            <span class="skill-badge postgresql">POSTGRESQL</span>
-            <span class="skill-badge mysql">MYSQL</span>
-            <span class="skill-badge sqlite">SQLITE</span>
-            <span class="skill-badge tableau">TABLEAU</span>
-            <span class="skill-badge canva">CANVA</span>
-            <span class="skill-badge powerpoint">MICROSOFT POWERPOINT</span>
-            <span class="skill-badge office">MICROSOFT OFFICE</span>
-            <span class="skill-badge excel">MICROSOFT EXCEL</span>
-            <span class="skill-badge sheets">GOOGLE SHEETS</span>
-            <span class="skill-badge vscode">VSCODE</span>
-            <span class="skill-badge figma">FIGMA</span>
-            <span class="skill-badge prezi">PREZI</span>
-            <span class="skill-badge sql-server">MICROSOFT SQL SERVER</span>
-            <span class="skill-badge github-actions">GITHUB ACTIONS</span>
-            <span class="skill-badge windows-terminal">WINDOWS TERMINAL</span>
-        </div>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>
+                <h3>JLL</h3>
+                <p>Business Intelligence Developer III</p>
+                <p>Jul 2023 - Present · 1 yr 8 mos</p>
+                <p>Mesa, Arizona, United States</p>
+            </li>
+        </ul>
     </section>
 
-    <!-- ... (rest of the sections remain unchanged) ... -->
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <h3>The University of Tulsa: Collins College of Business</h3>
+                <p>Master of Science, Business Analytics</p>
+                <p>2019 - 2020</p>
+                <p>Grade: Overall GPA : 4.0/4.0</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Business Intelligence (BI)</li>
+            <li>SQL</li>
+            <li>AI</li>
+            <li>Business Analysis</li>
+            <li>Tableau</li>
+            <li>Excel</li>
+        </ul>
+    </section>
 
     <footer>
         <div class="contact-links">
