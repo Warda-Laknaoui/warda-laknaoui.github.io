@@ -30,15 +30,14 @@
             transform: translateY(-5px);
         }
         .profile-picture {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-            margin-right: 20px;
-        }
+        width: 150px;
+        height: 150px;
+        object-fit: cover; /* Maintains the aspect ratio */
+        border-radius: 0; /* Makes it a perfect square */
+        border: 5px solid #fff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
         .profile-picture:hover {
             transform: scale(1.1) rotate(5deg);
         }
