@@ -54,7 +54,10 @@
             animation: colorChange 5s infinite;
         }
         .contact-links {
-            margin-top: 10px;
+            display: flex;
+            flex-direction: column; /* Make links vertical */
+            align-items: flex-start; 
+    gap: 10px; /* Space between links */
         }
         .contact-links a {
             display: inline-block;
