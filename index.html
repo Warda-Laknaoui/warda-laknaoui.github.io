@@ -40,13 +40,14 @@
         }
 
         .profile-picture {
-            width: 300px; /* Adjust to your preferred size */
-            height: 300px;
-            object-fit: cover;
-            border-radius: 50%; /* A more conventional profile appearance */
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+        width: 300px; /* Adjust based on desired size */
+        height: 300px; /* Ensure this keeps the aspect */
+        object-fit: cover; /* Alter to 'contain' if you want the full image */
+        object-position: center; /* Ensures the center of the image is displayed */
+        border-radius: 50%; /* If you aim for a circular crop */
+        border: 5px solid #fff;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
         }
         .profile-picture:hover {
             transform: scale(1.1) rotate(5deg);
