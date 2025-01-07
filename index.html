@@ -30,20 +30,23 @@
             transform: translateY(-5px);
         }
         .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* This adds spacing between flex items */
+        }
+
+        nav {
+            flex-grow: 1; /* Takes up remaining space pushing the image to the right */
         }
 
         .profile-picture {
-            width: 300px;
-            height: 300px;
+            width: 150px; /* Adjust to your preferred size */
+            height: 150px;
             object-fit: cover;
-            border-radius: 0;
+            border-radius: 50%; /* A more conventional profile appearance */
             border: 5px solid #fff;
             box-shadow: 0 0 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
-            margin-left: auto; /* Correctly pushes the image to the right */
         }
         .profile-picture:hover {
             transform: scale(1.1) rotate(5deg);
