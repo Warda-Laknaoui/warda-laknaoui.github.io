@@ -31,24 +31,46 @@
         }
         .header-container {
     display: flex;
-    align-items: center;
-    gap: 20px; /* This adds spacing between flex items */
-        }
+    justify-content: space-between;
+    align-items: flex-start;
+        width: 100%;
+    }
 
-        nav {
-            flex-grow: 1; /* Takes up remaining space pushing the image to the right */
-        }
+    nav {
+        flex-grow: 1;
+    }
 
-        .profile-picture {
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .profile-picture-container {
+        flex-shrink: 0;
+    }
+
+    .profile-picture {
         width: 300px;
         height: 300px;
         object-fit: cover;
-        object-position: top center; /* Adjust to focus more on the top of the image */
-        border-radius: 50%; /* Creates the circular crop */
+        object-position: center top;
+        border-radius: 50%;
         border: 5px solid #fff;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
         transition: transform 0.3s ease;
-        }
+    }
         .profile-picture:hover {
             transform: scale(1.1) rotate(5deg);
         }
@@ -106,17 +128,19 @@
 <body>
     <header>
         <div class="header-container">
-          <nav>
-            <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="https://www.linkedin.com/in/warda-laknaoui/" target="_blank">LinkedIn</a></li>
-              <li><a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank">Tableau</a></li>
-              <li><a href="https://medium.com/@laknaouiwarda1" target="_blank">Medium</a></li>
-            </ul>
-          </nav>
-          <img src="images/My_Pic.jpg" class="profile-picture">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="https://www.linkedin.com/in/warda-laknaoui/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank">Tableau</a></li>
+                    <li><a href="https://medium.com/@laknaouiwarda1" target="_blank">Medium</a></li>
+                </ul>
+            </nav>
+            <div class="profile-picture-container">
+                <img src="images/My_Pic.jpg" class="profile-picture" alt="Warda Laknaoui">
+            </div>
         </div>
-      </header>
+    </header>
 
     <section id="experience">
         <h2>Experience</h2>
