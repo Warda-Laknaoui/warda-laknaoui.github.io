@@ -47,6 +47,11 @@
             display: flex;
             gap: 20px;
         }
+        nav a.active {
+        background-color: #3498db;
+        color: white;
+        text-decoration: underline;
+    }
 
         nav li {
             margin: 0;
@@ -268,5 +273,43 @@ hiking and exploring new trails, which rejuvenates my creativity and problem-sol
                 hsl(${Math.random() * 360}, 50%, 80%) 100%)`;
         });
     </script>
+    <body>
+        <!-- All your existing HTML content goes here -->
+    
+        <script>
+            document.body.addEventListener('click', () => {
+                document.body.style.background = `linear-gradient(135deg, 
+                    hsl(${Math.random() * 360}, 50%, 80%) 0%, 
+                    hsl(${Math.random() * 360}, 50%, 80%) 100%)`;
+            });
+    
+            // Function to update active link
+            function updateActiveLink() {
+                const links = document.querySelectorAll('nav a');
+                const currentHash = window.location.hash || '#about'; // Default to #about if no hash
+                links.forEach(link => {
+                    if (link.getAttribute('href') === currentHash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+    
+            // Update active link on page load and hash change
+            window.addEventListener('load', updateActiveLink);
+            window.addEventListener('hashchange', updateActiveLink);
+    
+            // Add click event listeners to nav links
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if (link.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        window.location.hash = link.getAttribute('href');
+                        updateActiveLink();
+                    }
+                });
+            });
+        </script>
 </body>
 </html>
