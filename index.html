@@ -30,47 +30,47 @@
             transform: translateY(-5px);
         }
         .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-        width: 100%;
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
 
-    nav {
-        flex-grow: 1;
-    }
+        nav {
+            flex-grow: 1;
+        }
 
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        gap: 20px;
-    }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
 
-    nav li {
-        margin: 0;
-    }
+        nav li {
+            margin: 0;
+        }
 
-    nav a {
-        text-decoration: none;
-        color: #000;
-    }
+        nav a {
+            text-decoration: none;
+            color: #000;
+        }
 
-    .profile-picture-container {
-        flex-shrink: 0;
-    }
+        .profile-picture-container {
+            flex-shrink: 0;
+        }
 
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        object-position: center top;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease;
-    }
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
         .profile-picture:hover {
             transform: scale(1.1) rotate(5deg);
         }
@@ -86,33 +86,33 @@
             animation: colorChange 5s infinite;
         }
         nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: flex-end;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
         }
 
         nav li {
-        margin-right: 20px;
+            margin-right: 20px;
         }
 
         nav a {
-        text-decoration: none;
-        color: #000;
+            text-decoration: none;
+            color: #000;
         }
         .contact-links {
             display: flex;
-            flex-direction: column; /* Make links vertical */
+            flex-direction: column;
             align-items: flex-start; 
-            gap: 5 px; /* Space between links */
+            gap: 5px;
         }
         .contact-links a {
             display: inline-block;
             margin-right: 50px;
             color: #3498db;
             text-decoration: none;
-            font-size: 15px; /* Adjust icon size */
+            font-size: 15px;
             transition: color 0.3s ease;
         }
         .contact-links a:hover {
@@ -122,6 +122,63 @@
             0% { color: #3498db; }
             50% { color: #e74c3c; }
             100% { color: #3498db; }
+        }
+        
+        /* New styles for the skills section */
+        #skills {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            background-color: #2980b9;
+        }
+
+        /* Styles for the Send a Request section */
+        #send-request {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #send-request h2 {
+            margin-top: 0;
+        }
+
+        #send-request p {
+            margin-bottom: 10px;
+        }
+
+        #send-request a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #send-request a:hover {
+            color: #e74c3c;
         }
     </style>
 </head>
@@ -154,7 +211,7 @@ hiking and exploring new trails, which rejuvenates my creativity and problem-sol
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
+        <ul class="skills-list">
             <li>Critical Thinking</li>
             <li>Tableau</li>
             <li>SQL</li>
@@ -181,7 +238,6 @@ hiking and exploring new trails, which rejuvenates my creativity and problem-sol
         </ul>
     </section>
 
-
     <section id="education">
         <h2>Education</h2>
         <ul>
@@ -193,6 +249,7 @@ hiking and exploring new trails, which rejuvenates my creativity and problem-sol
         </ul>
     </section>
 
+    <!-- New Send a Request section -->
     <section id="send-request">
         <h2>Send a Request</h2>
         <p>Thanks for reaching out! Give me some details and some time to reach back out.</p>
