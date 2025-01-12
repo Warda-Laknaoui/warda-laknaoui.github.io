@@ -101,9 +101,9 @@
         .skills-list {
             list-style-type: none;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 20px;
         }
         .skills-list li {
             background-color: #3498db;
@@ -112,10 +112,57 @@
             border-radius: 5px;
             font-size: 0.9em;
             transition: background-color 0.3s ease;
+            text-align: center;
         }
         .skills-list li:hover {
             background-color: #2980b9;
         }
+         
+        <style>
+    /* ... (other styles remain the same) ... */
+
+    #skills {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .skills-list {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 20px;
+    }
+
+    .skills-list li {
+        background-color: #3498db;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        transition: background-color 0.3s ease;
+        text-align: center;
+    }
+
+    .skills-list li:hover {
+        background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+        .skills-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
         #send-request {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
