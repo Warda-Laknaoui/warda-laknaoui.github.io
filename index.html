@@ -141,22 +141,22 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .projects-container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: none;
-            justify-content: center;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap; /* Allows projects to wrap to the next line if needed */
+        justify-content: center;
         }
+
         .project {
         flex: 1;
         min-width: 250px;
         max-width: 45%;
         box-sizing: border-box;
-        background-color: transparent; /* Remove background color */
-        color: #333; /* Change text color to something readable on white */
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
+        background-color: transparent; /* No background color */
+        color: #333; /* Ensure text is readable */
+        padding: 0; /* Remove padding to keep image size only */
+        border-radius: 0; /* No border or radius on the project container */
+        box-shadow: none; /* Remove shadow */
         text-align: center;
         text-decoration: none;
         display: flex;
@@ -164,18 +164,23 @@
         align-items: center;
         }
 
-        .project:hover {
-            transform: translateY(-5px);
-        }
-        .project-image {
-            width: 100%;
-            height: auto;
-            max-height: 150px; /* You can adjust this to control the image height */
-            max-width: 100px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            object-fit: cover; /* Ensures images fill their containers without distortion */
-        }
+    .project-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: soften corners of the image slightly */
+    margin-bottom: 10px; /* Space between image and text */
+    object-fit: cover; /* Ensures image fits the project area nicely */
+    }
+
+    .project > p {
+        margin: 0;
+        padding: 10px 0; /* Optional: add some space between image and text */
+    }
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds slight hover effect */
+    }
         #send-request {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
