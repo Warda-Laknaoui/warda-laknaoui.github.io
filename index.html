@@ -7,7 +7,6 @@
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Existing styles remain unchanged */
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
@@ -93,93 +92,68 @@
             100% { color: #3498db; }
         }
         #skills {
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .skills-list {
-        list-style-type: none;
-        padding: 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px 20px;
-    }
-
-    .skills-list li {
-        background-color: #3498db;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9em;
-        transition: background-color 0.3s ease;
-        text-align: center;
-    }
-
-    .skills-list li:hover {
-        background-color: #2980b9;
-    }
-
-    @media (max-width: 768px) {
-        .skills-list {
-            grid-template-columns: repeat(2, 1fr);
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-    }
-
-    @media (max-width: 480px) {
         .skills-list {
-            grid-template-columns: 1fr;
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 20px;
         }
-    }
+        .skills-list li {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+        .skills-list li:hover {
+            background-color: #f0f0f0;
+        }
         #projects {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            padding: none;
+            padding: 20px;
             margin-bottom: 5px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .projects-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Allows projects to wrap to the next line if needed */
-    justify-content: center;
-    padding: 10px 0; /* Optional: some padding to the container for spacing */
-}
-
-    .project {
-        flex: 1;
-        min-width: 200px; /* Reduce minimum width to make images smaller */
-        max-width: 300px; /* Control maximum width to reduce size */
-        box-sizing: border-box;
-        background-color: transparent; /* No background color */
-        color: #333; /* Ensure text is readable */
-        padding: 0; /* Remove padding to keep image size only */
-        text-align: center;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-image {
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 10px; /* Space between image and text */
-        object-fit: cover; /* Ensures image fits the project area nicely */
-    }
-
-    .project > p {
-        margin: 0;
-        padding: 5px 0; /* Optional: small space between image and text */
-        max-width: 260px; /* Aligns with the project image width */
-    }
-
-    .project:hover {
-        transform: translateY(-5px); /* Slight lift to indicate interaction */
-        box-shadow: none; /* Optional: slight shadow on hover */
-    }
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
+        .project {
+            flex: 0 0 calc(25% - 20px);
+            max-width: calc(25% - 20px);
+            box-sizing: border-box;
+            background-color: transparent;
+            color: #333;
+            padding: 0;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
         #send-request {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
@@ -218,7 +192,11 @@
                 height: 300px;
             }
             .project {
-                min-width: 100%;
+                flex: 0 0 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+            .skills-list {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (max-width: 480px) {
@@ -231,6 +209,13 @@
             }
             .skills-list li {
                 font-size: 0.8em;
+            }
+            .project {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .skills-list {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -287,16 +272,17 @@
         <h2>Projects</h2>
         <div class="projects-container">
             <a href="https://www.kaggle.com/code/wardalaknaoui1/sentiment-analysis-usa-step-by-step-emojis-tags" target="_blank" class="project">
-            <img src="images/Youtube Sentiment Analysis.png" class="project-image">
-        </a>
-        <a href="https://www.kaggle.com/code/yehyachali/of-walmart-sales-forecasting" target="_blank" class="project">
-            <img src="images/Walmart Sales.png"  class="project-image">
-        </a>
-        <a href="https://www.kaggle.com/code/wardalaknaoui1/house-prices-advanced-regression-techniques" target="_blank" class="project">
-            <img src="images/Houses.png" class="project-image">
-        </a>
-        <a href="https://github.com/wardalaknaoui1/Indeed_Web-Scraping" target="_blank" class="project">
-        <img src="images/Indeed Web Scraping.png" class="project-image">   
+                <img src="images/Youtube Sentiment Analysis.png" class="project-image" alt="Youtube Sentiment Analysis">
+            </a>
+            <a href="https://www.kaggle.com/code/yehyachali/of-walmart-sales-forecasting" target="_blank" class="project">
+                <img src="images/Walmart Sales.png" class="project-image" alt="Walmart Sales">
+            </a>
+            <a href="https://www.kaggle.com/code/wardalaknaoui1/house-prices-advanced-regression-techniques" target="_blank" class="project">
+                <img src="images/Houses.png" class="project-image" alt="House Prices">
+            </a>
+            <a href="https://github.com/wardalaknaoui1/Indeed_Web-Scraping" target="_blank" class="project">
+                <img src="images/Indeed Web Scraping.png" class="project-image" alt="Indeed Web Scraping">
+            </a>
         </div>
     </section>
 
