@@ -141,45 +141,44 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .projects-container {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap; /* Allows projects to wrap to the next line if needed */
-        justify-content: center;
-        }
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows projects to wrap to the next line if needed */
+    justify-content: center;
+    padding: 10px 0; /* Optional: some padding to the container for spacing */
+}
 
-        .project {
+    .project {
         flex: 1;
-        min-width: 50px;
-        max-width: 50;
-        box-sizing: none;
+        min-width: 200px; /* Reduce minimum width to make images smaller */
+        max-width: 300px; /* Control maximum width to reduce size */
+        box-sizing: border-box;
         background-color: transparent; /* No background color */
         color: #333; /* Ensure text is readable */
         padding: 0; /* Remove padding to keep image size only */
-        border-radius: 0; /* No border or radius on the project container */
-        box-shadow: none; /* Remove shadow */
         text-align: center;
         text-decoration: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-        }
+    }
 
     .project-image {
-    width: 50%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: soften corners of the image slightly */
-    margin-bottom: 10px; /* Space between image and text */
-    object-fit: cover; /* Ensures image fits the project area nicely */
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between image and text */
+        object-fit: cover; /* Ensures image fits the project area nicely */
     }
 
     .project > p {
         margin: 0;
-        padding: 5px 0; /* Optional: add some space between image and text */
+        padding: 5px 0; /* Optional: small space between image and text */
+        max-width: 260px; /* Aligns with the project image width */
     }
 
     .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds slight hover effect */
+        transform: translateY(-5px); /* Slight lift to indicate interaction */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: slight shadow on hover */
     }
         #send-request {
             background: rgba(255, 255, 255, 0.8);
