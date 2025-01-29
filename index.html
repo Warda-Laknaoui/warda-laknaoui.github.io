@@ -118,19 +118,18 @@
         .skills-list li:hover {
             background-color: #f0f0f0;
         }
-        #projects {
+        #projects, #tableau {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .projects-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
-
         .project-link {
             display: inline-block;
             padding: 10px 15px;
@@ -142,20 +141,17 @@
             border-bottom: 2px solid #3498db;
             font-weight: 500;
         }
-
         .project-link:hover {
             background-color: #3498db;
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
         .project-link::after {
             content: " →";
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-
         .project-link:hover::after {
             opacity: 1;
         }
@@ -232,7 +228,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="https://www.linkedin.com/in/warda-laknaoui/" target="_blank">LinkedIn</a></li>
-                <!-- <li><a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank">Tableau</a></li> -->
+                <li><a href="#tableau">Tableau</a></li>
                 <li><a href="https://medium.com/@laknaouiwarda1" target="_blank">Medium</a></li>
             </ul>
         </nav>
@@ -280,19 +276,28 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects-container">
-            <a href="https://www.kaggle.com/code/wardalaknaoui1/sentiment-analysis-usa-step-by-step-emojis-tags" target="_blank" class="project">
+            <a href="https://www.kaggle.com/code/wardalaknaoui1/sentiment-analysis-usa-step-by-step-emojis-tags" target="_blank" class="project-link">
                 <span class="project-text">Youtube Sentiment Analysis</span>
             </a>
 
-            <a href="https://www.kaggle.com/code/yehyachali/of-walmart-sales-forecasting" target="_blank" class="project">
+            <a href="https://www.kaggle.com/code/yehyachali/of-walmart-sales-forecasting" target="_blank" class="project-link">
                 <span class="project-text">Walmart Sales</span>
             </a>
 
-            <a href="https://www.kaggle.com/code/wardalaknaoui1/house-prices-advanced-regression-techniques" target="_blank" class="project">
+            <a href="https://www.kaggle.com/code/wardalaknaoui1/house-prices-advanced-regression-techniques" target="_blank" class="project-link">
                 <span class="project-text">House-prices-advanced regression techniques</span>
             </a>
-            <a href="https://github.com/wardalaknaoui1/Indeed_Web-Scraping" target="_blank" class="project">
+            <a href="https://github.com/wardalaknaoui1/Indeed_Web-Scraping" target="_blank" class="project-link">
             <span class="project-text">Indeed Web Scraping</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="tableau">
+        <h2>Tableau Visualizations</h2>
+        <div class="projects-container">
+            <a href="https://public.tableau.com/app/profile/warda6429/vizzes" target="_blank" class="project-link">
+                <span class="project-text">View My Tableau Public Profile</span>
             </a>
         </div>
     </section>
