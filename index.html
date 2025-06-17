@@ -300,9 +300,9 @@
 
     <script>
         document.body.addEventListener('click', () => {
-            document.body.style.background = `linear-gradient(135deg,
+            document.body.style.background = linear-gradient(135deg,
                 hsl(${Math.random() * 360}, 50%, 80%) 0%,
-                hsl(${Math.random() * 360}, 50%, 80%) 100%)`;
+                hsl(${Math.random() * 360}, 50%, 80%) 100%);
         });
 
         function updateActiveLink() {
